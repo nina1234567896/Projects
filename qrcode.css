@@ -1,0 +1,101 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --LightGray: hsl(212, 45%, 89%);
+    --GrayishBlue: hsl(220, 15%, 55%);
+    --DarkBlue: hsl(218, 44%, 22%);
+}
+
+
+
+
+* {
+    margin:0;
+    padding:0;
+    background-color: var(--LightGray);
+}
+
+
+
+.main {
+    background-color: var(--white);
+    border:solid 2px var(--LightGray);
+    display:grid;
+    grid-template-rows: 300px;
+    align-content: center;
+    justify-content:center;
+    border-radius:20px;
+    width: 290px;
+    height:450px;
+    margin:auto;
+    margin-top:5%;
+    padding-top:5px;
+    
+ 
+    
+}
+
+
+ .image {
+
+    background:url(images/image-qr-code.png);
+    background-size:cover;
+    border-radius:10px;
+    border:solid 1.5px var(--LightGray);
+    width:260px;
+    height:270px;
+
+    
+ }
+
+
+
+ p {
+
+    background-color: var(--white);
+    opacity:0.98;
+    line-height: 17px;
+    font-family:'Outfit', sans-serif;
+    text-align:center;
+    font-weight: 800;
+
+ }
+
+
+
+ .top {
+    color: var(--DarkBlue);
+    letter-spacing: 0.04em;
+    font-size: 20px;
+    margin-bottom:20px;
+ }
+
+
+
+ .bot {
+    
+    color : var(--GrayishBlue);
+    font-family:'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight:400;
+    line-height: 15px;
+    margin-bottom:30px;
+ }
+
+
+
+
+
+
+.attribution { 
+
+    font-size: 10px;
+     text-align: justify; 
+     
+    }
+
+
+    .attribution a { 
+        
+        color: hsl(228, 45%, 44%); 
+
+    }
