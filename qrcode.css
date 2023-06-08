@@ -37,7 +37,7 @@
 
  .image {
 
-    background:url(images/image-qr-code.png);
+    background:url(image-qr-code.png);
     background-size:cover;
     border-radius:10px;
     border:solid 1.5px var(--LightGray);
