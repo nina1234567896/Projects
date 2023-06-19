@@ -20,11 +20,9 @@
     background-color: var(--white);
     border:solid 2px var(--LightGray);
     display:grid;
-    grid-template-rows: 300px;
+    grid-template-rows: 500px;
     align-content: center;
     justify-content:center;
-    place-items:center;
-   
     border-radius:20px;
     width: 290px;
     height:450px;
