@@ -21,6 +21,7 @@
     border:solid 2px var(--LightGray);
     display:grid;
     grid-template-rows: 300px;
+    grid-template-columns :50vw;
     align-content: center;
     justify-content:center;
     border-radius:20px;
