@@ -85,7 +85,7 @@ main {
     bottom:10rem;
     left:7.5rem;
     border-radius:10px;
-    
+    z-index:6;
        
     
 }
