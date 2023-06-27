@@ -1,0 +1,190 @@
+:root {
+    --SoftBlue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --VeryDarkBlueMain: /*(main BG)*/ hsl(217, 54%, 11%);
+     
+    
+    --VeryDarkBlue/* (card BG)*/: hsl(216, 50%, 16%);
+    --VeryDarkBlueLine/*lin*/: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    
+
+
+}
+
+* {
+   margin:0;
+   padding:0;
+  
+font-family: 'Outfit', sans-serif;
+}
+
+
+body{
+
+background-color: var(--VeryDarkBlueMain);
+
+
+}
+
+main {
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    flex-direction: column;
+    max-width:320px;
+    min-width:300px;
+    min-height:34vh;
+    max-height:109vh;
+    margin-top:3rem;
+    border-radius:13px;
+    box-shadow:20px 40px 20px 20px hsl(231,50%, 10%);
+    margin:auto;
+    margin-top:5%;
+
+}
+
+.wrapper {
+    width:17.5rem;
+    height:17rem;
+    position:relative;
+    left:20px;
+    top:2px;
+}
+
+
+.wrapper::after  {
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:var(--Cyan);
+    opacity:1;
+    border-radius:10px;
+    z-index:-3;
+    bottom:0.1rem;
+    top:1rem;
+    right:0rem;
+
+    
+
+
+}
+.ETH{
+    width:100%;
+    height:100%;
+    margin-top:1rem;
+    border-radius:10px;
+     
+
+}
+
+.eye {
+    width:15%;
+    height:15%;
+    position:relative;;
+    bottom:10rem;
+    left:7.5rem;
+    border-radius:10px;
+    z-index:4;
+       
+    
+}
+
+
+
+
+h3 {
+    color : var(--White);
+    font-weight: 600;
+    text-align:justify;
+    margin-left:1.3rem;
+    margin-top:2.3rem;
+    margin-bottom:1rem;
+    letter-spacing: 0.1rem;
+
+
+}
+
+span , p {
+    color:var(--SoftBlue);
+    font-weight:300;
+    margin-left:1.3rem;
+    letter-spacing:0.5px;
+}
+
+
+
+.below {
+    width:96%;
+    display:flex;
+    justify-content: space-between;
+    margin-top:1.3rem;
+    
+}
+
+#money {
+    color : var(--Cyan);
+    font-weight:400;
+}
+
+
+.profile {
+    border-top:solid 1px var(--VeryDarkBlueLine);
+    width:90%;
+   
+    margin-left:1.3rem;
+    margin-top:1rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+#name {
+     color : var(--White);
+     font-size: 16px;
+     text-align:left;
+     
+}
+
+
+.avatar {
+    width:11%;
+    height:80%;
+    border-radius:100%;
+    margin-right:10px;
+    border:solid 1px var(--White);
+}
+
+.attribution {
+     font-size: 11px;
+    text-align: center;
+
+
+     }
+
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+
+}
+
+h3:active , #name:active  {
+    color:var(--Cyan);
+    cursor:pointer;
+    
+   
+}
+
+.ETH:active {
+    z-index:-1;
+    opacity:0.4;
+    cursor:pointer;
+
+}
+
+
+.wrapper:active::after {
+    z-index:2;
+    opacity:0.3;
+   cursor:pointer;
+
+}
