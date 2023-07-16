@@ -1,0 +1,118 @@
+:root {
+    --DarkCyan: hsl(185, 75%, 39%);
+    --Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+    --DarkGrayishBlue: hsl(227, 10%, 46%);
+    --DarkGray: hsl(0, 0%, 59%);
+}
+
+* {
+  
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--DarkCyan);
+    font-family: 'Kumbh Sans', sans-serif;
+    margin-top:15%;
+    
+}
+
+#top {
+    position:absolute;
+    bottom:10%;
+    right:10%;
+
+}
+
+#bottom{
+    position:absolute;
+    top:310%;
+    left:160%;
+    transform:rotate(30deg);
+}
+
+main{
+    background-color: white;
+    width:73rem;
+    margin:15rem 2rem 8rem 5rem;
+    text-align:center;
+    border-radius: 85px;
+    
+}
+
+.profile img{
+    height:22rem;
+    width:73rem;
+    position:relative;
+    border-top-left-radius:85px;
+    border-top-right-radius: 85px;
+    
+}
+
+
+.profile::after {
+    content:"";
+    position:absolute;
+    background: url("images/image-victor.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border:15px solid white;
+    border-radius: 100%;
+    width:250px;
+    height:250px;
+    left:32rem;
+    top:29rem;
+}
+
+h2{
+    font-size:6rem;
+    color:var(--Verydarkdesaturatedblue);
+    margin-top:12rem;
+}
+h2 div{
+    display: inline-block;
+    color:var(--DarkGrayishBlue);
+    font-weight:200;
+    font-size:4.5rem;
+    margin-left:2rem;
+}
+
+h5  {
+    font-size:3rem;
+    font-weight:200;
+    color:var(--DarkGrayishBlue);
+}
+
+.rate{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2rem;
+    border-top:3px solid rgba(230, 240, 233,1);
+    
+}
+
+.rate h1 {
+    font-weight:900;
+    color:var(--Verydarkdesaturatedblue);
+    
+}
+
+.rate  h1 div {
+color:var(--DarkGrayishBlue);
+width:20rem;
+font-weight:200;
+font-size:3rem;
+}
+.attribution {
+    margin-top:5%;
+     font-size: 0.688rem;
+      text-align: left;
+     }
+
+
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
