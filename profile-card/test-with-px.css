@@ -15,9 +15,15 @@ body {
     background-color: var(--DarkCyan);
     font-family: 'Kumbh Sans', sans-serif;
 
-    margin-top:10%;
+   /* margin-top:10%;
     margin-left:40%;
-    margin-right:30%;
+    margin-right:30%;*/
+    
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+
 }
 
 main {
