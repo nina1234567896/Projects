@@ -1,0 +1,268 @@
+
+:root {
+    --LightRed: hsl(0, 100%, 67%);
+ --OrangeyYellow: hsl(39, 100%, 56%);
+  --GreenTeal: hsl(166, 100%, 37%);
+--CobaltBlue: hsl(234, 85%, 45%);
+
+/*Gradients*/
+
+--LightSlateBlueBackground: hsl(252, 100%, 67%);
+--LightRoyalBlueBackground: hsl(241, 81%, 54%);
+
+--VioletBlueCircle: hsla(256, 72%, 46%, 1);
+--PersianBlueCircle: hsla(241, 72%, 46%, 0);
+
+
+/*Neutral*/
+
+--White: hsl(0, 0%, 100%);
+ --PaleBlue: hsl(221, 100%, 96%);
+--LightLavender: hsl(241, 100%, 89%);
+--DarkGrayBlue: hsl(224, 30%, 27%);
+}
+@font-face {
+    font-family:'Hanken Grotesk';
+    src: url("assets/fonts/static/HankenGrotesk-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+    font-family:'Hanken Grotesk';
+    src: url("assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+    font-weight: 900;
+}
+@font-face {
+    font-family:'Hanken Grotesk';
+    src: url("assets/fonts/static/HankenGrotesk-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+    font-family:'Hanken Grotesk';
+    src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+  
+}
+
+
+*,::after,::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+main {
+    
+    font-family:'Hanken Grotesk' , san-serif;
+    min-width:237px;
+    overflow:hidden;
+}
+.flex {
+    display:flex;
+    
+}
+
+
+
+/*top section*/
+
+
+.top {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(var(--LightSlateBlueBackground),var(--LightRoyalBlueBackground));
+    border-bottom-left-radius:20px;
+    border-bottom-right-radius:20px;
+    color:white;
+    text-align:center;
+   
+}
+
+.top h5 {
+    margin:1.3rem 0;
+    font-weight:300;
+    font-size:0.9rem;
+}
+.top :nth-child(2){
+    background: linear-gradient(var(--VioletBlueCircle),var(--PersianBlueCircle));
+    box-shadow:4px px;
+    border:none;
+    border-radius:100%;
+    width:8rem;
+    height:8rem;
+    font-size:3rem;
+    padding-top:1.4rem;
+
+   
+}
+
+.top :nth-child(2) .lavender {
+    font-size: 0.8rem;
+    font-weight:400;
+    opacity:0.8;
+
+    
+}
+
+.lavender{
+    color:var(--LightLavender);
+}
+
+.top h3  {
+    margin:0.8rem 0;
+}
+.top :nth-child(4) {
+   width:17rem;
+   font-weight:400;
+   margin:0 0 2.3rem 0;
+}
+
+
+
+
+
+/*bottom section*/
+
+h4 {
+    margin-left:2.5rem;
+    font-weight:900;
+    color:var(--DarkGrayBlue);
+}
+.bottom {
+    padding-top:1.2rem;
+}
+.bottom .flex {
+    justify-content:space-between;
+    align-items: center;
+    margin:1rem 2.5rem;
+    height:3rem;
+    border-radius:8px;
+    padding:0rem 0.8rem;
+    font-weight:700;
+    
+}
+.flex img {
+    height:16px;
+    margin-right:3px;
+}
+
+ .flex h6 {
+    font-weight:400;
+    font-size:16px;
+    color:black;
+ }
+ .flex h6 span {
+    color:var(--DarkGrayBlue);
+    font-weight:500;
+ }
+#reaction {
+    color:var(--LightRed);
+    opacity:0.8; 
+    background-color: hsla(0, 80%, 86%, 0.1);
+    
+}
+
+#memory {
+    color:var(--OrangeyYellow);
+    opacity:0.8;
+    background-color: rgb(248, 224, 180,0.2);
+    }
+#verbal {
+   color:var(--GreenTeal);
+   background-color: hsla(166, 73%, 88%,0.3);
+  
+}
+#visual{
+    color:var(--DarkGrayBlue);
+    opacity:0.8;
+    background-color: hsla(234, 70%, 91%,0.3);;
+}
+
+button {
+    background-color:var(--DarkGrayBlue);
+    opacity: 0.9;
+    color:white;
+    font-size:15px;
+    font-weight:600;
+    letter-spacing: 0.8px;
+    width:78%;
+    max-width: 550px;
+    height:3rem;
+    border-radius:20px;
+    border:none;
+    margin:0 2rem;
+    margin-bottom:1.5rem;
+
+}
+
+button:hover{
+    background-color:var(--LightRoyalBlueBackground);
+}
+@media screen and (min-width:374px) and (max-width:589px){
+    button {
+        margin-left:2.5rem;
+        width:82%;
+    }
+}
+@media screen and (min-width :590px) and (max-width:761px){
+   /*top*/
+    .top h5 {
+        font-size:1.5rem;
+    }
+    .top h3 {
+        font-size:2rem;
+    }
+    .top :nth-child(4) {
+   width:28rem;
+   font-weight:400;
+   margin:0 0 1rem 0;
+   font-size:1.5rem;
+}
+/*bottom*/
+h4 {
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.bottom .flex , .bottom .flex h6{
+    font-size:1.5rem;
+}
+button{
+    font-size:20px;
+        margin-left:4.5rem;
+        
+        
+        
+         
+     
+    
+}
+}
+@media screen and (min-width:762px) {
+    body {
+       margin-top:5%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    main {
+        display:flex;
+        flex-direction:row;
+        box-shadow: 8px 8px 5px lightgray;
+        border-radius: 20px;
+    }
+
+    main section {
+        width:20rem;
+    }
+   .top {
+    border-radius:20px;
+    
+   }
+    .bottom {
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    
+    
+}
