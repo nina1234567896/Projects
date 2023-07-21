@@ -1,0 +1,147 @@
+
+
+:root {
+ /*   ## Primary*/
+
+--BrightOrange: hsl(31, 77%, 52%);
+--DarkCyan: hsl(184, 100%, 22%);
+--VeryDarkCyan: hsl(179, 100%, 13%);
+
+/*Neutral*/
+
+--TransparentWhiteParagraphs: hsla(0, 0%, 100%, 0.75);
+--VeryLightGraybackgroundheadingsbuttons: hsl(0, 0%, 95%);
+}
+
+*,::before,::after{
+    padding:0;
+    margin:0;
+   
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    align-items:center;
+    min-height: 100vh;
+    background-color: var(--VeryLightGraybackgroundheadingsbuttons);
+}
+main {
+    display:flex;
+    flex-direction:column;
+    min-width:21.875rem;
+    width:100%;
+    margin-top:5%;
+    border-radius:25px;
+}
+
+
+img {
+    margin-top:3rem;
+}
+.one {
+    background-color:var(--BrightOrange);
+}
+
+.two {
+    background-color:var(--DarkCyan);
+}
+
+.three {
+    background-color:var(--VeryDarkCyan);
+}
+h1 {
+    color:var(--VeryLightGraybackgroundheadingsbuttons);
+    font-family:'Red Hat Display', sans-serif;
+    text-transform:uppercase;
+    margin-top:2rem;
+    margin-bottom:1.5rem;
+    font-size:2rem;
+  
+    
+}
+
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--TransparentWhiteParagraphs);
+    opacity: 0.8;
+    line-height:1.7rem;
+    min-width:15rem;
+
+}
+
+button {
+    background-color:var(--VeryLightGraybackgroundheadingsbuttons);
+       font-family: 'Lexend Deca', sans-serif;
+       opacity:0.9;
+       font-weight: 500;
+       border-radius: 25px;
+       height:3rem;
+       width:8rem;
+       border:none;
+       margin-bottom:2.5rem;
+       margin-top:1.5rem;
+}
+
+h1, p ,img, button{
+    margin-left:2.4rem;
+    margin-right:1.5rem;
+}
+.one button {
+    color:var(--BrightOrange);
+}
+.two button {
+    color:var(--DarkCyan);
+}
+
+.three button {
+    color:var(--VeryDarkCyan);
+}
+
+button:hover {
+    border:2px solid var(--VeryLightGraybackgroundheadingsbuttons);
+    background-color: transparent;
+    color:var(--VeryLightGraybackgroundheadingsbuttons);
+}
+@media only screen and (min-width :350px) and (max-width: 768px){
+    img{
+        width:190px;
+        height:150px;
+        margin-left:30.4%;
+    }
+    p{
+        font-size:1.8rem;
+        line-height:2.5rem;
+    }
+    
+    h1 ,p{
+        text-align: center;
+    }
+
+    button {
+        width:80%;
+      margin-left:12%;
+      margin-top:5rem;
+      margin-bottom:3rem;
+       font-size:1.7rem;
+       font-weight:600;
+      
+    }
+    
+}
+
+@media only screen and (min-width :769px){
+  
+    main {
+        width:21.875rem;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    p {
+        width:15rem;
+    }
+}
