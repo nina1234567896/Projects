@@ -1,0 +1,174 @@
+:root {
+    /*### Primary*/
+
+   --Cyan: hsl(179, 62%, 43%);
+   --BrightYellow: hsl(71, 73%, 54%);
+
+/*### Neutral*/
+
+--LightGray: hsl(204, 43%, 93%);
+ --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+*,::before,::after{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Karla', sans-serif; 
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:100vh;
+    background-color: var(--LightGray);
+
+}
+#container {
+    display:flex;
+    flex-wrap: wrap;
+    border-radius:10px;
+}
+#one {
+    background-color: white;
+    padding-right:1.8rem;
+    max-width:39.063rem;
+}
+#one h1{
+   color: var(--Cyan);
+   margin:1rem 2rem 1rem 1rem ;
+}
+
+#one h2{
+    color:var(--BrightYellow);
+    font-size:1rem;
+    margin:1rem 0 0 1rem ;
+}
+#one p {
+    color:var(--GrayishBlue);
+    margin:1rem 0 2rem 1rem ;
+}
+
+
+#two ,#three {
+    width:19.531rem;
+}
+#two {
+    background-color: var(--Cyan);
+    color:white;
+    opacity: 0.7;
+   
+   
+}
+#two h1 {
+    margin:1.5rem 0 0.2rem 1rem;
+    font-size:1rem;
+}
+#two :nth-child(2){
+font-size:2rem;
+font-weight:500;
+ display:inline-block;
+ margin:1rem 0 1rem 1rem ;
+     
+}
+#two p {
+    margin:0 0 0.5rem 1rem ;
+}
+
+#two h3 {
+    display:inline-block;
+    color:var(--LightGray);
+    opacity: 0.7;
+    font-weight: 100;
+    font-size:0.8rem;
+    letter-spacing: 0.12rem;
+}
+
+button{
+    background-color: var(--BrightYellow);
+    color:white;
+    font-size:1.2rem;
+    width: 85%;
+    height:3rem;
+    cursor: pointer;
+    border:none;
+    border-radius:10px;
+    margin:1.5rem 0 1.5rem 1rem ;
+    box-shadow: 1px 1px 4px black;
+}
+
+#three {
+    background-color: hsla(179, 62%, 43%,0.8);
+    color:var(--LightGray);
+    opacity: 0.8;
+    
+}
+#three h3 {
+    color:white;
+    margin:1.5rem 0 1.2rem 1rem ;
+  
+}
+#three ul {
+    margin:1rem 0 1rem 1rem ;
+    
+}
+#three li{
+    margin:0.5rem 0;
+    list-style-type: none;
+}
+
+a {
+    text-decoration-line: none;
+    color:white;
+   }
+   
+   button:hover {
+    border:inset;
+    color:var(--BrightYellow);
+    background-color:white;
+    transition: all 1s ease-out;;
+   }
+   a:hover{
+    text-decoration: underline;
+   }
+   
+   
+
+@media only  screen and (min-width:19.688rem) and (max-width:39rem){
+    #two , #three {
+        width:100%;
+        text-align:center;
+    }
+    #two h1 {
+        font-size:1.5rem;
+    }
+   
+    #two :nth-child(2){
+        font-size:2.5rem;
+    }
+    #two p {
+        margin:0;
+        font-size:1.5rem;
+    }
+    #two h3 {
+
+        font-size:1rem;
+        }
+
+        button {
+            width:70%;
+            margin-top:2rem;
+            margin-bottom:3rem;
+            font-size:1.5rem;
+            font-weight: 700;
+        }
+        #three h3 {
+            font-size:2rem;
+        }
+      
+    }
