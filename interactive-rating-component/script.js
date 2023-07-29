@@ -15,23 +15,27 @@ console.log(one.innerHTML);
 one.addEventListener("click",function(){
     rating= 1;
     select.innerHTML = "You selected " + rating+ " out of 5.";
-    
+    submit.removeAttribute("disabled");  
 })
 two.addEventListener("click",function(){
     rating= 2;
     select.innerHTML = "You selected " + rating +" out of 5.";
+    submit.removeAttribute("disabled");
 })
 three.addEventListener("click",function(){
     rating= 3;
     select.innerHTML = "You selected " + rating + " out of 5.";
+      submit.removeAttribute("disabled");
 })
 four.addEventListener("click",function(){
     rating= 4;
     select.innerHTML = "You selected " + rating + " out of 5.";
+      submit.removeAttribute("disabled");
 })
 five.addEventListener("click",function(){
     rating= 5;
     select.innerHTML = "You selected " + rating + " out of 5.";
+      submit.removeAttribute("disabled");
 })
 submit.addEventListener("click",function(){
     
