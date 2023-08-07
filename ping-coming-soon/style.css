@@ -1,0 +1,192 @@
+:root{
+   /* ### Primary*/
+
+--Blue: hsl(223, 87%, 63%);
+
+/*### Secondary*/
+
+--PaleBlue: hsl(223, 100%, 88%);
+--LightRed: hsl(354, 100%, 66%);
+
+/*### Neutral*/
+
+ --Gray: hsl(0, 0%, 59%);
+--VeryDarkBlue: hsl(209, 33%, 12%);
+}
+
+*,::after,::before {
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container{
+    display:flex;
+}
+
+html {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+body , header, main, footer{
+   
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    margin-top:2rem;
+    margin-bottom:2rem;
+    width:3rem;
+}
+header h1 {
+    font-size:1.3rem;
+    font-weight:600;
+    margin-bottom: 0.8rem;
+ 
+}
+header h1 span {
+    color:var(--Gray);
+    font-weight:400;
+
+}
+
+header h3 {
+    font-size:0.7rem;
+    font-weight:500;
+    color: var(--Gray);
+    margin-bottom:1.5rem;
+}
+
+.email-container{
+    width:97%;
+}
+form input{
+border:1px solid lightblue;
+border-radius: 25px;
+padding-left:1rem;
+margin-bottom: 0.5rem;;
+
+
+}
+form input::placeholder{
+    font-size:0.7rem;
+    color: lightgray;
+}
+
+.form {
+    flex-wrap:wrap;
+}
+form input, button {
+    width:100%;
+max-width:15rem;
+height:2rem;
+justify-content: flex-end;
+}
+button{
+    background-color: var(--Blue);
+    color:white;
+    border-radius:25px;
+border:none;
+box-shadow: -3px 3px 5px  lightgray;
+font-size:0.7rem;
+margin-bottom: 3rem;
+
+}
+
+
+main img {
+    object-fit: contain;
+    min-width:19rem;
+    width:90%;
+    height:3%;
+}
+
+footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin-top: 1.8rem;
+    
+}
+footer .container svg {
+    width:1.5rem;
+    height:1.5rem;
+    border:0.2px solid lightgrey;
+    border-radius:100%;
+   object-fit: 0.5rem 0.5rem;
+   padding:0.3rem 0.2rem 0.2rem 0.2rem;
+   fill:#1E88E5 ;
+   margin-right:0.5rem;
+   
+   
+}
+
+footer p{
+    font-size:0.7rem;
+    color:gray;
+    margin-top: 3rem;
+}
+
+
+
+footer svg:hover , footer svg:active{
+    fill:white;
+    background-color: #1E88E5 ;
+}
+
+form input:focus, form input:active{
+   box-shadow:2px 2px 15px lightblue;
+   outline:none;
+   
+}
+
+
+form input :valid {
+    border:5px solid lightgreen;
+    box-shadow: none;
+}
+button:active , button:active{
+border: 3px inset #1E88E5;
+}
+
+button:hover {
+    font-weight:600;
+    font-size:0.9rem;
+}
+
+.error-message{
+font-size:9px;
+margin-left:1rem;
+color:var(--LightRed);
+display:none;
+margin-bottom:1.2rem;
+}
+
+@media screen and (min-width: 769px) {
+    header h1{
+        font-size:1.5rem;
+    }
+    form{
+        width:34rem;
+      
+       flex-direction: row;
+       justify-content: center;
+    }
+    .email-container {
+        width:50%;
+    }
+    form input {
+        width:100%;
+
+    }
+    button {
+        width:25%;
+         
+     }
+}
