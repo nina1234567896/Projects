@@ -1,0 +1,246 @@
+
+:root {
+   /* ### Primary*/
+
+--DesaturatedRed: hsl(0, 36%, 70%);
+  --SoftRed: hsl(0, 93%, 68%);
+
+/*### Neutral*/
+
+--DarkGrayishRed: hsl(0, 6%, 24%);
+
+/*### Gradients*/
+
+--Gradient1: linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 52%, 97%));
+--Gradient2: linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+
+}
+
+*,::after,::before{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height:100vh;
+  margin-top:1%;
+  background :rgb(227, 227, 227);
+}
+
+
+main{
+  display:flex;
+  flex-direction:column;
+  background :var(--Gradient1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family:'Josefin Sans',sans-serif;
+  padding-bottom:5rem;
+ box-shadow:10px 10px 20px lightgray;
+}
+ 
+ .header {
+  background-image: url("images/logo.svg");
+  height:3rem;
+  width:100%;
+  background-repeat: no-repeat;
+  margin-top:1rem;
+  margin-left:1rem;
+  background-size: auto 1.5rem;
+ }
+
+ .hero {
+  object-fit: contain;
+ }
+
+ .content {
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+ text-align: center;
+ margin-top:3rem;
+ padding:0 1rem 0 2rem;
+ margin-left:0.5rem; 
+}
+
+
+h1 {
+  color: var(--DarkGrayishRed);
+  font-size:2.5rem;
+  font-weight:600;
+  width:19rem;
+  letter-spacing: 0.5rem;
+  line-height: 2.5rem;
+
+}
+
+h1 span {
+  color:var(--DesaturatedRed);
+  font-weight:400;
+}
+
+p {
+  color:hsla(0, 36%, 70%,0.8);
+  font-weight: 600;
+  font-size:0.8rem;
+  line-height:1.5rem;
+ 
+  margin-top:1.5rem;
+  margin-bottom:1.5rem;
+ 
+ 
+}
+
+form {
+  position:relative;
+ /* border:2px solid red;*/
+  width:100%;
+  
+}
+p,form {
+ max-width:22rem;
+ 
+ 
+}
+
+.email{
+  outline:none;
+  border:0.5px solid lightgrey;
+  background-color: transparent;
+  width:100%;
+  height:3rem;
+  border-radius: 30px;
+
+  
+  
+
+}
+
+.email:focus ,.email:active{
+  background-color: transparent;
+}
+#error-icon{
+  background:url("images/icon-arrow.svg"),var(--Gradient2);
+  position:absolute;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 30px;
+  width:4rem;
+  height:3rem;
+   bottom:0rem;
+   right:0;
+   outline: none;
+   border:none;
+   box-shadow: -5px 5px 20px lightgray;
+   cursor: pointer;
+
+}
+
+.email-error {
+  background: url("images/icon-error.svg");
+  height:1rem;
+  background-repeat: no-repeat;
+  width:0.8rem;
+  background-size:cover;
+  position:relative;
+  bottom:2rem;
+  left:6rem;
+  display:none;
+
+}
+
+
+.email::placeholder{
+  color:hsla(0, 36%, 70%,0.4);
+  font-weight:600;
+  padding-left:1rem;
+  font-size:0.8rem;
+}
+
+.error-message {
+  color:var(--SoftRed);
+  font-size:0.5rem;
+  padding-right:13rem;
+ 
+  display:none;
+
+}
+
+
+#error-icon:hover {
+  background:url("images/icon-arrow.svg"),linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 63%, 85%));
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: -10px 10px 30px lightgray;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+
+@media only screen and (min-width:798px) {
+
+
+  main {
+     
+    display:grid;
+    align-items: start;
+    grid-template-rows: 3rem 1fr;
+    grid-template-columns: 1.2fr 1fr;
+    background:url("images/bg-pattern-desktop.svg"),linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 52%, 97%));
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom-left;
+    height:35rem;
+ 
+    
+  }
+
+
+ .header {
+
+  grid-column:1/2;
+  grid-row: 1/2;
+  margin-top:1.5rem;
+ background-position:calc(8.5rem + 1%) 0;
+ 
+ }
+
+ .content {
+
+  grid-column:1/2;
+  grid-row-start:2/3;
+/*border:1px solid red;*/
+ margin-top:4rem;
+ align-items: center;
+ align-self: center;
+ justify-content: center;
+ 
+ }
+
+
+ .hero{
+  
+  grid-column:2/3;
+  grid-row:1/3;
+
+ }
+
+
+ .hero img{
+
+  width:100%;
+  height:35rem;
+  
+}
+
+}
