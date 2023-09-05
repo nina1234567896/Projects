@@ -1,0 +1,286 @@
+:root{
+   /* ## Colors*/
+
+--VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+--DesaturatedDarkBlue: hsl(214, 17%, 51%);
+--GrayishBlue: hsl(212, 23%, 69%);
+--LightGrayishBlue: hsl(210, 46%, 95%);
+--widthHidden : 10px;
+}
+
+*, ::before,::after {
+
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Manrope", sans-serif;
+    background-color: var(--LightGrayishBlue);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+   
+}
+.container {
+    display:flex;
+}
+
+main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    margin: 2rem 1rem;
+    position:relative;
+   
+   
+}
+
+
+
+.hero {
+    width:100%;
+    height:16rem;
+    background-image: url("images/drawers.jpg");
+    background-size:100% 22rem;
+    background-repeat: no-repeat;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.content {
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    margin:2.5rem 1.6rem 1rem 1.8rem;
+   min-width:16.5rem;
+    
+}
+
+.content h1{
+
+    color:var(--VeryDarkGrayishBlue);
+    font-size: 1.1rem;
+    font-weight: 800;
+    max-width:21rem;
+}
+
+.content p{
+    color:var(--DesaturatedDarkBlue);
+    font-size:0.85rem;
+    font-weight:600;
+    line-height: 1.5rem;
+    margin-top:1rem;
+    padding-right:0.9rem;
+    max-width:24rem;
+}
+
+.content .container {
+    justify-content:space-between;
+    align-items: center;
+    font-size:0.7rem;
+    margin-top: 2rem;
+    position:relative;
+}
+
+.content .container h2{
+    color:var(--VeryDarkGrayishBlue);
+    font-size:0.9rem;
+    margin-left: 3.5rem;
+}
+
+.content .container h2 div {
+    color:hsla(214, 17%, 51%,0.8);
+    font-weight:500;
+    line-height: 1.5rem;
+    
+    
+}
+
+.content .container h2 div::before {
+    content:"";
+    position:absolute;
+    width:2.5rem;
+    height:2.5rem;
+    background-image:url("images/avatar-michelle.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    bottom:0.1rem;
+    left:0;
+   
+   
+   
+  
+  
+}
+
+
+.content .container .arrow {
+   /* background-image: url("images/icon-share.svg");
+    background-repeat: no-repeat;
+    background-size:1rem 0.8rem;
+    background-position: center;*/
+    width:2rem;
+    height:2rem;
+    border-radius: 100%;
+    background-color: var(--LightGrayishBlue);
+    position:relative;
+    z-index:5;
+    padding-top:0.5rem;
+    padding-left:0.5rem;
+    cursor:pointer;
+    
+}
+
+
+.hidden {
+    background-color: var(--VeryDarkGrayishBlue);
+    height:4.5rem;
+    width:100%;
+    max-width:27.4rem;
+    min-width:20rem;
+    display:none;
+    align-items:center;
+    justify-content:flex-start;
+    position:absolute;
+    bottom: 0;
+    z-index:4;
+    gap:1.5rem;
+    padding-left:2rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin: 0rem 1rem;
+  
+   
+}
+
+
+.hidden h2 {
+    color:var(--GrayishBlue);
+    font-weight:500;
+    font-size:0.7rem;
+    letter-spacing: 0.5rem;
+    line-height: 1rem;
+    cursor: pointer;
+   
+}
+
+.hidden svg {
+    cursor: pointer;
+}
+
+.content .container .arrow:hover , content .container .arrow:active{
+    background-color: var(--DesaturatedDarkBlue);
+   
+}
+
+.content .container .arrow:hover path , content .container .arrow:active path{
+    fill:white;
+
+}
+
+.hidden  {
+    animation: fade 2s linear;
+}
+ @keyframes fade {
+    0%{
+       opacity:0;
+      height:0;
+      
+        
+    }
+    
+    100%{
+        opacity:1;
+      
+ }
+ }
+
+ 
+@media screen and (min-width: 769px){
+
+    body {
+        animation: appear 3s linear;
+    }
+
+    @keyframes appear {
+        0%{
+            opacity:0;
+            height:0;
+        }
+        100%{
+            opacity:1;
+        }
+    }
+
+  main {
+    flex-direction:row;
+    margin: 2rem 1rem 0rem 1rem;
+    border-radius: 10px;
+  }
+
+ .hero{
+    height:17rem;
+    width:18rem;
+    border-radius:0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-size:cover;
+ 
+}
+
+.content {
+    margin:0rem 1.6rem 1rem 2rem;
+   
+    
+}
+
+.content p{
+    
+    line-height: 1.3rem;
+   
+}
+.content .container {
+    margin-top: 1.2rem;
+
+ 
+}
+/*active state*/
+.hidden {
+    height:3.5rem;
+    width:17rem;
+    bottom:6.3rem;
+    right:1rem;
+    left:32.2rem;
+    padding:0 2rem;
+   border-radius: 10px;
+   box-shadow: 2px 2px 19px black;
+   
+}
+
+.hidden h2 {
+   
+    letter-spacing: 0.4rem;
+    font-size:0.8rem
+    
+   
+}
+.hidden::after{
+    content:"";
+    width: 0; 
+  height: 0; 
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-top: 13px solid var(--VeryDarkGrayishBlue);
+  position: absolute;
+  top:3.5rem;
+  right:9.4rem;
+  
+}
+  
+
+}
