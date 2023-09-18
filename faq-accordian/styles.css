@@ -1,0 +1,213 @@
+:root {
+    --VeryDarkDesaturatedBlue: hsl(238, 29%, 16%);
+    --SoftRed: hsl(14, 88%, 65%);
+
+/*#### Gradient*/
+
+/*Background gradient:*/
+
+--SoftViolet: hsl(273, 75%, 66%);
+--SoftBlue: hsl(240, 73%, 65%);
+
+/*### Neutral*/
+
+/*#### Text*/
+
+ --VeryDarkGrayishBlue: hsl(237, 12%, 33%);
+ --DarkGrayishBlue: hsl(240, 6%, 50%);
+
+/*#### Dividers*/
+
+--LightGrayishBlue: hsl(240, 5%, 91%);
+
+}
+
+
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background:linear-gradient(var(--SoftViolet),var(--SoftBlue)) ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    min-height: 100vh;
+}
+
+main {
+   
+    background-color: white;
+   padding:0 1.2rem 3rem 1.5rem;
+    border-radius: 20px;
+    flex-direction: column;
+    justify-content: center;
+    animation: appear 5ms ease-in;
+   
+}
+
+
+@keyframes appear{
+    0% {
+       opacity:0;
+    }
+   
+    100%{
+    opacity:1;
+    }
+}
+
+
+.hero {
+    height:8.2rem;
+    width:100%;
+    min-width:23.438rem;
+    background-image :url("images/bg-pattern-mobile.svg");
+    background-repeat:no-repeat;
+    background-size: contain;
+    background-position: 2rem 0;
+    position:relative;
+}
+
+  .woman{
+  
+    width:18rem;
+    height:6rem;
+    position:absolute;
+    bottom:10rem;
+    left:2rem;
+    
+}
+
+.content {
+    border-bottom: solid 1px var(--LightGrayishBlue);
+    cursor:pointer;
+   
+    
+}
+h1{
+    text-align: center;
+    color:var(--VeryDarkDesaturatedBlue);
+    font-weight:800;
+}
+
+.flex {
+    display:flex;
+}
+
+.question {
+align-items: center;
+justify-content: space-between;
+
+
+}
+
+.question p {
+   
+    width:18rem;
+    color:var(--VeryDarkGrayishBlue);
+    font-size:0.9rem;
+    font-weight: 500;
+}
+
+.hidden {
+   color:var(--DarkGrayishBlue);
+   opacity:0.8;
+   font-size:0.7rem;
+   letter-spacing: 0.02rem;
+   max-width:22rem;
+   padding-bottom:0.5rem;
+ display:none;
+ animation:appear 500ms linear;
+ 
+ 
+}
+
+.col{
+    display:block !important;
+   
+    
+  }
+
+.fonts {
+    font-weight:800 !important;
+    transition: font-weight 400ms ease-in !important;
+}
+.tog-arrow {
+    transform: rotate(-180deg);
+  
+}
+
+.question svg {
+    cursor: pointer;
+    transition: transform 500ms ease-in;
+}
+
+/*.question svg:hover{
+   transform: rotate(-180deg);
+}
+
+*/
+
+@media only screen and (min-width: 769px) {
+    
+    main {
+       
+        flex-direction: row;
+        padding:0rem 5rem 0rem 0rem;
+        justify-content: flex-start;
+        
+       
+    }
+
+    .hero {
+
+        justify-self: flex-end;
+        height:28rem;
+        width:27rem;
+        background-image :url("images/bg-pattern-desktop.svg");
+        background-size: auto;
+        background-position:-39rem -20.9rem;
+        position:relative;
+        
+        
+    }
+    
+   .woman {
+    bottom:18rem;
+    left:-4rem;
+    
+   }
+.woman img {
+    height:18rem;
+    position:relative;
+    z-index:2;
+    
+   
+}
+.woman::before {
+    content :url("images/illustration-box-desktop.svg");
+    position:absolute;
+    height:9rem;
+    width:6rem;
+    left:-2.01rem;
+    bottom: -8.5rem;
+    z-index:3;
+    background:linear-gradient(var(--SoftViolet)-115%, var(--SoftBlue) 180%) ;
+    
+}
+
+.all {
+    padding-top:1.5rem;
+   
+}
+  .content {
+        flex-direction: column;
+        align-self: flex-start;
+        
+    }
+    .question p{
+        margin-right:4rem;
+     
+    }
+    
+}
