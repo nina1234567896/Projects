@@ -1,0 +1,366 @@
+@font-face {
+    font-family: "roboto";
+    src:url("assets/fonts/Roboto-Regular.ttf");
+   
+}
+@font-face{
+    font-family:"roboto-bold";
+    src:url("assets/fonts/Roboto-Bold.ttf");
+}
+:root  {
+   /* ### Primary
+*/
+--Tomato: hsl(4, 100%, 67%);
+
+/*### Neutral*/
+
+--DarkSlateGrey: hsl(234, 29%, 20%);
+--CharcoalGrey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+*,::after,::before {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "roboto";
+    
+    
+}
+
+body{
+    background-color:var(--DarkSlateGrey);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin:0 auto;
+    
+}
+.container {
+  
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+main{
+    
+    background-color: white;
+    display:flex;
+    /*display:none*/
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:var(--DarkSlateGrey);
+ /*   border:2px solid black;*/
+ padding-bottom:2rem;
+    margin-bottom:1rem;
+    width:100%;
+    min-width:18.75rem;
+  
+   
+}
+   picture img {
+   width:100%;
+ /*  border:5px solid purple;*/
+   }
+
+   .hero img {
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+   }
+
+.content div h1 {
+   
+    font-size:2rem;
+}
+
+.content  div h1,label, button {
+    font-family: "roboto-bold";
+}
+
+
+ .content {
+    color:var(--DarkSlateGrey);
+    font-family: "roboto";
+    font-size:0.9rem;
+  /*  border:2px solid black;*/
+    
+ }
+
+ form{
+    width:92%;
+    margin-left:1rem;
+    position:relative;
+   /* max-width:17.2rem;*/
+ }
+
+ form span {
+    display:none;
+    position:absolute;
+    right:0;
+    top:0;
+    margin-right:1rem;
+    color:var(--Tomato);
+    font-size:0.75rem;
+    
+ }
+
+button,.email{
+    width: 100%;
+    cursor:pointer;
+}
+.email:invalid{
+    background-color:(var(--Tomato));
+}
+
+.email:focus, .email:active{
+    background-color:transparent;
+}
+
+ .content div h1 {
+    align-self: flex-start;
+    margin-top:2rem;
+    margin-bottom: 1rem;
+    padding-left:1.4rem;
+ }
+
+
+
+.content .content-inner div,main p {
+   
+    min-width:11rem;
+    width:92%;
+    margin:1rem;
+   
+    display:flex;
+  /*  border: 2px solid red;*/
+   
+}
+
+.content .content-inner{
+    margin:0 1.5rem;
+    
+   
+}
+
+.content .content-inner div img {
+margin-right:0.8rem;
+justify-self: flex-start;
+height:1rem;
+   
+    
+}
+
+
+label{
+    font-family: "roboto-bold";
+    font-size:0.9rem;
+   
+}
+
+
+.email,button{
+    height:3rem;
+    border-radius: 6px;
+   
+    
+}
+.email {
+    outline: none;
+    border:1px solid var(--Grey);
+    margin-top:0.5rem;
+    margin-bottom: 1rem;
+    width:98%;
+}
+
+.email::placeholder{
+    padding-left:1rem;
+}
+button {
+    display:block;
+    color:white;
+    background-color:var(--DarkSlateGrey);
+    line-height: 0.5rem;
+    padding:0 2rem;
+    min-width:17rem;
+    transition: all 1s ease-in-out;
+   
+}
+
+.success-message{
+    display:none;
+    margin:0 auto;
+    padding:5rem 2rem 0 2rem;
+    background-color: white;
+    min-height:100vh;
+    width:100%;
+    min-width:20rem;
+    max-width:48rem;
+    color:var(--DarkSlateGrey);
+   /*add flex class*/
+}
+
+.success-message img {
+    margin-bottom:2rem;
+}
+.success-message h1{
+    font-size:2.2rem;
+    font-family:"roboto-bold";
+    width: 12rem;
+    line-height:2rem;
+    margin-bottom:1.5rem;
+}
+
+.success-message p {
+    font-size:0.9rem;
+
+}
+.success-message p span { 
+    display:inline-block;
+    font-family:"roboto-bold";
+}
+
+.success-message button{
+   
+    margin-top:8rem;
+
+}
+
+
+.flex{
+    display:flex !important;
+    flex-direction:column;
+    
+    align-items:center;
+    
+
+    
+}
+
+main , .success-message {
+    animation: appear 900ms linear;
+}
+
+@keyframes appear {
+    0% {
+        opacity:0;
+    }
+    100%{
+       opacity:100%;
+    }
+}
+
+button:hover, button:active {
+    outline:none;
+    border:none;
+    background:linear-gradient(to right,rgb(241, 66, 95),var(--Tomato));
+  
+    
+}
+@media only screen and (min-width: 420px) {
+    
+
+  body {
+    margin:auto;
+  }
+.content  {
+   margin-left:1.5rem;
+}
+.content .content-inner {
+    width:96%;
+}
+    main{ 
+       min-width:48rem;
+       max-width:53rem;
+    border-radius:20px;
+    height:34rem;
+    flex-direction: row-reverse;
+   gap:0.2rem;
+    align-items: center;
+    justify-content: center;
+    }
+
+    picture {
+       position:relative;
+       top:1.2rem;
+       left:1rem;
+       
+        
+    }
+picture img {
+    height:32rem;
+    padding-right:2rem;
+    
+    
+    
+}
+   form {
+
+    margin-top:2.5rem;
+   }
+    
+    .content div h1 {
+        text-align:center;
+       
+    }
+    .email{
+        margin-bottom:1.2rem;
+    }
+
+  .success-message img, .success-message h1 {
+    margin-left:30%;
+  }
+
+  .success-message img{
+    margin-left:39%;
+  }
+}
+
+@media only screen and (min-width: 769px){
+    .success-message{
+        margin:5% auto;
+        padding:2rem 2rem 0 2rem;
+        height:68vh;
+        min-height:68vh; 
+        width:24.2rem;
+       border-radius:20px;
+        
+       
+    }
+    
+    .success-message img {
+        margin-bottom:1rem;
+        width:3rem;
+        height:5rem;
+    }
+    .success-message h1{
+        font-size:2.2rem;
+        
+    }
+    
+    .success-message p {
+        font-size:0.9rem;
+        margin-bottom:1.6rem;
+    
+    }
+    .success-message p span { 
+        display:inline-block;
+        font-family:"roboto-bold";
+    }
+    
+   .success-message button {
+    margin-top:1rem;
+    width:20rem;
+   }
+   .success-message img, .success-message h1 {
+    margin-left:0;
+  }
+}
