@@ -1,0 +1,268 @@
+:root {
+ /*   ### Primary*/
+
+ --LinearGradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+/*### Neutral*/
+
+--VeryLightGrayishBlue: hsl(240, 78%, 98%);
+--LightGrayishBlue: hsl(234, 14%, 74%);
+--GrayishBlue: hsl(233, 13%, 49%);
+--DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+
+
+
+*,::before,::after  {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:url("images/bg-top.svg"),url("images/bg-bottom.svg");
+    background-repeat: no-repeat no-repeat;
+    background-size: contain contain;
+    background-position: right top, left bottom;
+    background-color: var(--VeryLightGrayishBlue);
+    font-family: "Monteserrat",sans-serif;
+    overflow:scroll; 
+    animation:appear 1s linear;
+}
+
+
+@keyframes appear {
+    
+    0% {
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+.flex{
+    display:flex;
+}
+
+
+header h1 {
+    color:var(--GrayishBlue);
+    font-size:1.5rem;
+    font-weight: 800;
+    margin:2rem 0 2rem 0;
+    text-align:center;
+}
+
+header p{
+    color:var(--LightGrayishBlue);
+    font-size:0.8rem;
+    font-weight: 800;
+
+}
+
+header .flex {
+    position :relative;
+    justify-content: center;
+    align-items: center;
+    gap:1.5rem;
+}
+input[type="checkbox"]{
+    appearance: none;
+    border-style: 1px solid var(--LightGrayishBlue);
+    width:3rem;
+    height:2rem;
+    border-radius:20px;
+    background: linear-gradient(to right,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    
+}
+
+
+label {
+    position:absolute;
+    height:1.5rem;
+    width:1.5rem;
+    background-color:white;
+    border-radius: 100%;
+    left:105px;
+    bottom:4px;
+    cursor: pointer;
+    transition: all 500ms ease-in-out;
+    
+}
+
+ label:active {
+    cursor:grab;
+    
+}
+
+input[type="checkbox"]:active{
+    background:var(--LightGrayishBlue);
+}
+
+
+
+.toggleYearly{
+    left:87px;
+}
+
+.card{
+     flex-direction:column;
+     justify-content: center;
+     align-items: center;
+
+}
+
+.container {
+    margin-top:3rem;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.card {
+    margin-bottom:1.8rem;
+    border-radius:10px;
+    box-shadow:-1px 5px 15px 0px var(--LightGrayishBlue);
+    min-width:14.563rem;
+    width:90%;
+    max-width:23.5rem;
+    text-align:center;
+    padding-bottom:1rem;
+    
+}
+.card h1 {
+    font-size:0.9rem;
+    margin:1rem 0 1rem 0;
+    
+}
+
+.card h2 {
+    font-size:2rem;
+    margin:1rem 0 1rem 0;
+   
+
+}
+.card h2 span{
+    font-size:4rem;
+ 
+}
+.card p {
+    font-size:0.7rem;
+    font-weight:900;
+    padding:1rem 0 1rem 0;
+    margin:0 1.5rem 0 1.5rem;
+
+}
+
+.one,.three{
+    background-color:white;
+}
+
+.one h1 , .three h1 , .one p, .three p {
+    color:var(--GrayishBlue);
+}
+
+.one h2 , .three h2 {
+    color:var(--DarkGrayishBlue);
+}
+
+
+.one button , .three button{
+    background:linear-gradient(to right,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+    color:var(--VeryLightGrayishBlue)
+
+}    
+
+.one button:hover ,.three button:hover, .one button:active, .three:active{
+    color:hsl(237, 63%, 64%);
+    background: white;
+    border:1px solid gray;
+    
+
+}
+.two {
+    background: linear-gradient(to bottom right ,hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+
+}
+
+
+.two h1 {
+    color:var(--VeryLightGrayishBlue);
+
+}
+
+
+.two p ,.two h2{
+    color:white;
+}
+
+.one p ,.two p,.three p {
+    border-top:1px solid var(--LightGrayishBlue);
+
+}
+
+.one :nth-child(6),.two :nth-child(6), .three :nth-child(6){
+    border-bottom:1px solid var(--LightGrayishBlue);
+  
+}
+
+
+.two button{
+     background-color: white;
+    color:hsl(237, 63%, 64%);
+
+
+}    
+
+.two button:hover , .two button:active {
+    border:1px solid gray;
+    background:transparent;
+    color: white;
+    
+}
+
+button {
+    border-radius:5px;
+    width:85%;
+    height:2.5rem;
+    letter-spacing: 0.1rem;
+    font-size:0.7rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin:1rem 0 1rem 0;
+    border:none;
+
+}
+
+
+.yearly {
+    display: none;
+}
+
+
+@media screen and (min-width:1157px){
+
+    .one {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .two {
+        width:21rem;
+        height:420px;
+        padding-top:1.8rem;
+        box-shadow: none;
+    }
+    .three {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+
+    .one, .three{
+        width:20rem;
+    }
+}
