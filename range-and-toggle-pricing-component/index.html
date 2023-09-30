@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Dancing+Script:wght@600&family=Fraunces:ital,wght@0,700;1,700&family=Great+Vibes&family=Hanken+Grotesk:ital,wght@0,200;1,100;1,200&family=Inconsolata&family=Inter:wght@100;200;300;400;500;600;700;800&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=La+Belle+Aurore&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100;200;300;400;600;700;800&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  
+ <main>
+  <section id="one">
+    <h1>Simple, traffic-based pricing</h1> 
+    <p>Sign-up for our 30-day trial. No credit card required. </p>
+  </section>
+    <section id="two"class="flex">
+      <div class="container-range flex">
+        <h1> <!--thenumberofviewsisdetermined by the slider-->100K PAGEVIEWS</h1>
+        <input type="range" min="10000" max="1000000" value ="495000"step="247500" id="range">
+        <h1><span>$16.00</span> /month</h1>
+      </div>
+      <div class="flex-content flex">
+        <div>
+          <p>Monthly Billing</p>
+          <span class="toggle-container">
+            <input type="checkbox" name="toggle">
+            <label for="toggle" class="toggle-button"></label>
+          </span>
+          
+        </div>
+      
+        <p> Yearly Billing 
+            <p id="discount">-25% discount</p>
+        </p>
+      </div>
+          
+    </section>
+    <section id="three" class="flex">
+      <div>
+       <div>
+         <img src="images\icon-check.svg">
+         <span>Unlimited websites</span>
+       </div>
+       <div>
+        <img src="images\icon-check.svg">
+        <span>100% data ownership</span>
+       </div>
+       <div>
+        <img src="images\icon-check.svg">
+        <span>Email reports</span>
+       </div>
+     </div>
+
+     <button>Start my trial</button>
+  </section>
+</main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Nina</a>.
+   
+  </div>
+ <!--<footer>
+    <div class="test">
+      <img src ="https://i.guim.co.uk/img/media/26392d05302e02f7bf4eb143bb84c8097d09144b/446_167_3683_2210/master/3683.jpg?width=1200&quality=85&auto=format&fit=max&s=a52bbe202f57ac0f5ff7f47166906403">
+    </div>
+  </footer>--> 
+  <script src="script.js"></script>
+</body>
+</html>
