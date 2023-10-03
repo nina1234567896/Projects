@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;200;300;400;500;600;700;800;900&family=Dancing+Script:wght@600&family=Fraunces:ital,wght@0,700;1,700&family=Great+Vibes&family=Hanken+Grotesk:ital,wght@0,200;1,100;1,200&family=Inconsolata&family=Inter:wght@100;200;300;400;500;600;700;800&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=La+Belle+Aurore&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Libre+Franklin:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lobster&family=Manrope:wght@200;300;400;500;600;700;800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100;200;300;400;600;700;800&family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:wght@400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header></header>
+  <main class="flex">
+    <section class="one">
+      
+        <label for="bill" class="bill-label" >Bill</label>
+        <input type="number" name="bill" required class="bill" placeholder="0" step="0.1">
+      </div class="flex">
+      <p>Select Tip %</p>
+      <div class="flex button-container">
+        <button class="percent">5%</button> 
+        <button class="percent">10%</button>
+        <button class="percent">15%</button>
+        <button class="percent">25%</button>
+        <button class="percent">50%</button>
+        <input type="number" placeholder="Custom"name="custom"id="custom-button"step="0.1">
+      </div>
+      <div class="flex label-error">
+        <label for="people" class="people-label">Number of People</label>
+        <span class="error">Can't be zero</span>
+      </div>
+      <input type="number" name="people" class="people" step="0.1"placeholder="0">     
+    </section>
+    <section class="two">
+      <div class="flex tip-container">
+        <div><p>Tip Amount</p> / person</div> 
+        <span class="tip">$<span>0.00</span></span>    
+      </div>  
+      <div class="flex amount-container">
+        <div><p>Total</p> / person</div>
+        <span class="amount">$<span>0.00</span></span>   
+      </div> 
+      <button class="reset" disabled>RESET</button>
+    </section>
+</main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
