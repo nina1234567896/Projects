@@ -1,0 +1,156 @@
+@font-face {
+    font-family: Jakarta;
+    src: url("assets/fonts/PlusJakartaSans-VariableFont_wght.ttf");
+    
+}
+
+:root {
+   /* ### Primary*/
+
+--Red: hsl(1, 90%, 64%);
+--Blue: hsl(219, 85%, 26%);
+
+/*### Neutral*/
+
+--White: hsl(0, 0%, 100%);
+--VeryLightGrayishBlue: hsl(210, 60%, 98%);
+--LightGrayishBlue1: hsl(211, 68%, 94%);
+--LightGrayishBlue2: hsl(205, 33%, 90%);
+--GrayishBlue: hsl(219, 14%, 63%);
+--DarkGrayishBlue: hsl(219, 12%, 42%);
+--VeryDarkBlue: hsl(224, 21%, 14%);
+}
+
+
+*,::before,::after{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.flex {
+display:flex;
+}
+
+body{
+    background-color: var(--VeryLightGrayishBlue);
+    font-family: Jakarta,sans-serif;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+}
+
+main{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    max-width:37.5rem;
+    min-width:20rem;
+}
+
+section {
+    width:95%;
+
+}
+.one{
+    justify-content: space-between;
+    align-items: center;
+    margin:1.5rem  0;
+}
+.one p {
+    font-size:0.8rem;
+    padding-right:0.3rem;
+    color:var(--DarkGrayishBlue)
+}
+h1 span{
+    background-color: var(--Blue);
+    padding:0.1rem 0.6rem 0.1rem 0.6rem;
+    
+    color:white;
+    font-weight: 500;
+    font-size:0.8rem;
+    border-radius: 5px;
+    
+}
+
+.gray{
+   background-color: var(--VeryLightGrayishBlue);
+}
+
+
+.time{
+    color:rgb(184, 183, 183) !important;
+    font-size:0.7rem !important;
+    padding-top:0.1rem !important;
+}
+
+.name {
+    color:black;
+    font-weight: 800;
+
+}
+.notifs {
+    display:flex;
+    gap:1rem;
+    margin-bottom:0.5rem;
+    padding:1rem;
+    border-radius: 5px;
+}
+.notifs img{
+    width:2rem;
+    height:2rem;
+   
+}
+.notifs p {
+    font-size:0.8rem;
+    color:var(--DarkGrayishBlue);
+    font-weight:600;
+}
+
+.club {
+    color:var(--Blue);
+    font-weight: 900;
+}
+
+.post {
+    color:var(--DarkGrayishBlue);
+    font-weight:900;
+}
+
+#thanks-message {
+    border:1px solid lightgray;
+    padding:0.4rem 1.5rem 0.4rem 0.2rem;
+    margin-top: 0.5rem;
+}
+
+.dot{
+    display:inline-block;
+    width:0.5rem;
+    height:0.5rem;
+    background-color: var(--Red);
+    border-radius: 100%;
+    margin-left: 0.2rem;
+}
+/*toggles*/
+.toggle{
+  background-color:transparent !important;
+
+}
+
+.name:hover , .post:hover , .group:hover {
+    color:var(--Blue);
+}
+.name, .post, .group, #thanks-message, .one p ,.notifs:nth-child(5) img:nth-last-child(1){
+    cursor:pointer;
+ }
+
+#thanks-message:hover {
+    background-color: var(--LightGrayishBlue1);
+}
+
+.one p:hover ,.one p:focus {
+    color:var(--Blue);
+}
+
