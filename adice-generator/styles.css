@@ -1,0 +1,166 @@
+:root {
+
+--Light-Cyan: hsl(193, 38%, 86%);
+--Neon-Green: hsl(150, 100%, 66%);
+--Grayish-Blue: hsl(217, 19%, 38%);
+--Dark-Grayish-Blue: hsl(217, 19%, 24%);
+--Dark-Blue: hsl(218, 23%, 16%);
+
+}
+*, ::before, ::after {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  
+  
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Dark-Blue);
+    color:var(--Light-Cyan);
+    align-items: center;
+    justify-content: center;
+    margin:2rem;
+    padding:3rem;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+    padding: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--Dark-Grayish-Blue);
+    height:16rem;
+     min-width: 20rem;
+    width:100%;
+    max-width: 24rem;
+    text-align: center;
+    border-radius: 10px;
+    padding:1rem 1.5rem;
+    position: relative;
+    margin:0 3rem;
+     
+}
+
+.card h1 {
+    color:var(--Neon-Green);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    padding:0.8rem 0;
+    
+}
+
+.card p {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.card picture {
+    margin-top:4rem;
+    margin-right:1rem;
+    margin-left:1rem;
+    
+}
+@keyframes dicmo {
+    to {
+        transform: translate(0,0);
+    }
+    from {
+        transform:translate(2px,0);
+    }
+}
+.dice {
+    position: absolute;
+    background-color: var(--Neon-Green);
+    border-radius: 100%;
+    width:2.8rem;
+    height:2.8rem;
+    padding:11px;
+    cursor: pointer;
+    bottom:-1.5rem;
+    left: 158px;
+   transform: scale(0.95);
+   border:none;
+   outline: none;
+   
+   
+    
+
+}
+
+.divider {
+  
+    transform: translateY(-35px);
+}
+.divider img {
+    padding:0 1rem;
+    display: block;
+     transform: scale(0.8);
+   overflow: hidden;
+    width:min-content;
+    margin-bottom:1rem;
+   
+    
+}
+
+.dice :hover {
+    box-shadow:  3px 3px 50px rgb(255,255,255,1);
+    animation:linear dicmo 400ms;
+}
+.dice :focus{
+    box-shadow:  3px 3px 50px  rgb(255,255,255,1);
+    transform: translate(1px,1px);
+}
+.dice :active {
+    box-shadow:  3px 3px 50px  rgb(255,255,255,1);
+    transform: translate(1px,1px);
+}
+
+.attribution {
+margin-top:10rem;
+align-self: flex-start;
+
+}
+@media (max-width: 684px) {
+    .dice {
+        left:144px;
+     }
+     .divider img {
+        transform: scale(0.7);
+    }
+}
+@media (max-width: 672px) {
+    
+    .dice {
+        left:134px;
+     }
+}
+@media (max-width: 655px) {
+    
+    .dice {
+        left:130px;
+     }
+}
+
+@media (max-width: 593px) {
+    .dice {
+       left:130px;
+    }
+    
+}
+
