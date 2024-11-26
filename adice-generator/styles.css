@@ -118,6 +118,37 @@ main {
     
 }
 
+@keyframes rotating {
+    0%{
+        
+        transform: rotate(0deg);
+        
+    }
+    20%{
+        transform: rotate(72deg);
+
+    }
+    40%{
+        transform: rotate(144deg);
+
+    }
+    60%{
+        transform: rotate(216deg);
+
+    }
+    80%{
+        transform: rotate(288deg);
+
+    }
+    100%{
+        transform: rotate(360deg);
+
+    }
+}
+.rotate {
+    animation :1s infinite rotating;
+}
+
 .dice :hover {
     box-shadow:  3px 3px 50px rgb(255,255,255,1);
     animation:linear dicmo 400ms;
