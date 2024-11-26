@@ -1,0 +1,145 @@
+:root {
+    --Softred: hsl(10, 79%, 65%);
+    --Cyan: hsl(186, 34%, 60%);
+    --Darkbrown: hsl(25, 47%, 15%);
+    --Mediumbrown: hsl(28, 10%, 53%);
+    --Cream: hsl(27, 66%, 92%);
+    --Verypaleorange: hsl(33, 100%, 98%);
+}
+
+::before,::after , * {
+margin:0;
+padding:0;
+box-sizing: border-box;
+
+}
+ 
+body {
+    background-color: var(--Cream);
+    position: fixed;
+  inset: 0;
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+font-style: normal;
+}
+
+header , main {
+    min-width:21rem;
+    width:100%;
+    max-width:22rem;
+    border-radius:7px;
+}
+
+header {
+    background-color: var(--Softred);
+    
+    padding:1rem 1.5rem;
+
+}
+
+ header h1 {
+    color:var(--Cream);
+    font-size:0.8rem;
+    position:relative;
+    font-weight: 200;
+ }
+
+
+ header h2 {
+    color:var(--Verypaleorange);
+    margin-top:0.4rem;
+ }
+
+ main {
+    background-color: var(--Verypaleorange);
+   color:var(--Darkbrown);
+   margin-top:1rem;
+   padding:0 1.2rem;
+   
+}
+
+ .foot{
+    display:flex;
+    justify-content: space-between;
+    margin-top:1rem; 
+    border-top: solid 2px hsla(27, 34%, 89%, 0.9);
+    padding:1.2rem 0;
+ }
+
+
+ header h1::before {
+    content:url("images/logo.svg");
+    position: absolute;
+    right:0;
+    transform: scale(0.8);
+ }
+
+
+ .flex{
+    display:flex;
+    justify-content: space-between;
+    align-items: last baseline}
+
+.block span {
+    display: inline-block;
+    background-color: var(--Darkbrown);
+    color:var(--Verypaleorange);
+    font-weight:400;
+    font-size:0.6rem;
+    padding:0.3rem 0.4rem 0.3rem 0.4rem;
+    border-radius: 3px;
+    
+    transform: translateX(-4px);
+    visibility: hidden;
+   
+}
+
+ .bar {
+    background-color: var(--Softred);
+    height:100px;
+    width:32px;
+    border-radius: 3px;
+    margin-top:0.4rem;
+    cursor: pointer;
+    
+ }
+
+
+ .block p {
+    font-size:0.8rem;
+    color:var(--Mediumbrown);
+    text-align: center;
+    margin-top:0.1rem;
+ }
+
+ 
+ main h4 {
+    font-size: 1.2rem; 
+    padding: 1rem 0 2rem 0;
+ }
+
+
+ .total , .interest{
+    color:var(--Darkbrown);
+    font-weight: 600;
+ }
+
+
+ .total {
+    font-size: 2rem;
+ }
+ 
+
+ .brown {
+    color: var(--Mediumbrown);
+    font-weight:300;
+    font-size: 0.8rem;
+ }
+
+
+ .interest{
+    margin-top:1rem;
+ }
