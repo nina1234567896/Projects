@@ -21,6 +21,7 @@ dice.addEventListener("click",function(){
 
     try {getData()}
     catch(e){
-        return new Error("Timed out")
+        console.log(e);
+        alert("Something went wrong!")
     }
 })
