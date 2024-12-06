@@ -1,0 +1,445 @@
+:root {
+--Red: hsl(14, 86%, 42%);
+--Green: hsl(159, 69%, 38%);
+--Rose50: hsl(20, 50%, 98%);
+--Rose100: hsl(13, 31%, 94%);
+--Rose300: hsl(14, 25%, 72%);
+--Rose400: hsl(7, 20%, 60%);
+--Rose500: hsl(12, 20%, 44%);
+--Rose900: hsl(14, 65%, 9%);
+
+}
+
+*, ::after, ::before {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin:auto;
+    background-color: var(--Rose50);
+    position:relative;
+}
+
+
+main {
+    width:70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(auto-fill,1fr));
+    grid-gap:1rem;
+    align-content: center;
+    justify-items: center;
+    margin:10rem auto;
+
+ 
+}
+ #dessert{
+    position: absolute;
+    top:5%;
+    left:5%;
+    color:var(--Rose900);
+ }
+
+.item {
+    position: relative;
+    
+}
+.item h4{
+  color:var(--Rose400);
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+
+.item h5{
+    color:var(--Rose900);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+
+}
+
+.item h6{
+    color:var(--Red);
+    font-size:1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;;
+}
+
+.addToCart {
+    border:1px solid var(--Rose400);
+    position:absolute;
+    color: var(--Rose900);
+    font-weight:600;
+    font-size: 0.8rem;
+    bottom:5rem;
+    left:2rem;
+    background-color: var(--Rose50);
+    border-radius:30px;
+    padding:0.5rem 1.5rem;
+    line-height: 0.8rem;
+    cursor: pointer;
+
+    
+}
+.addToCart::before {
+    content:url("assets/images/icon-add-to-cart.svg");
+    width:fit-content;
+    margin-right: 5px;
+    position: relative;
+    bottom:-5px;
+
+}
+
+.addToCart:hover , .addToCart:focus {
+    color:var(--Red);
+    border:1px solid var(--Red);
+    
+}
+.addToCart:active {
+    color:var(--Red);
+    border:1px solid var(--Red);
+    transform: translate(1px,1px);
+    transform: scale(0.95);
+
+
+}
+.addToCart span {
+    display:inline-block;
+    width:5rem;
+    text-align: center;
+    transform: translate(-15px,-4px);
+}
+.addToCart .increment {
+    transform: translate(-2rem,-0rem);
+    border-radius: 100%;
+    width:1rem;
+    height:1rem;
+    padding:1px 1.5px;
+    fill:none;
+    
+}
+
+.addToCart .decrement {
+    transform: translate(0.4rem,-0.1rem);
+    border-radius: 100%;
+    padding:1px 1.5px;
+    width:1rem;
+    height:1rem;
+    fill:none;
+    
+}
+
+
+
+main .item img {
+    width:16rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    
+    
+}
+
+
+/* cCART------>*/
+
+.cart {
+    width: 100%;
+    
+    max-width: 20rem;
+    grid-row-start: 1 ;
+    grid-column-end:-1;
+    background:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    padding:1rem;
+    border-radius: 15px;
+    align-self: start;
+    margin-top:6%;
+
+}
+.cart .cart-inner .empty {
+ margin-bottom:1rem;
+ 
+}
+
+.cart .cart-inner .empty p {
+    color:var(--Rose500);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+
+.cart .cart-inner .empty img{
+    transform: translate(50%,0);
+    margin-top:2rem;
+
+
+}
+.cart h1 {
+    color:var(--Red);
+    align-self: flex-start;
+    
+}
+
+ .added {
+    background-color: white;
+    border-bottom: solid 1px var(--Rose300);
+    padding:1rem 6.5rem 1rem 0;
+    text-align: left;
+    position: relative;
+   
+
+
+
+
+}
+.added h4 {
+    font-size: 0.9rem;
+    color: var(--Rose900);
+    font-weight: 600;
+    line-height: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.added span {
+
+font-size:0.8rem;
+
+}
+.multiply {
+    color: var(--Red);
+    font-weight: 600;
+    margin-right: 1rem;
+    
+}
+.single-price {
+color:var(--Rose400);
+margin-right: 0.1rem;
+}
+
+.total-price{
+ color:var(--Rose500);
+ font-weight: 600;
+ margin-left: 0.3rem;
+}
+
+.added .theSvg {
+   transform: scale(0.7);
+    border-radius: 100%;
+    border:2px solid var(--Rose400);
+    fill:var(--Rose400);
+    padding:0.1rem;
+    cursor: pointer;
+    stroke:var(--Rose400) ;
+    position: absolute;
+    right:0px;
+    top:1rem;
+}
+
+.added .theSvg:hover, .added .theSvg:focus, .added .theSvg:active{
+    fill:black;
+    stroke:black ;
+    border:1px solid black;
+}
+
+ button{
+  background-color: var(--Red);
+  color:var(--Rose50);
+  border-radius: 20px;
+  outline:none;
+  border:none;
+  width:100%;
+  padding:0.5rem 3.1rem;
+  margin-top:1.2rem;
+  cursor: pointer;
+ 
+  
+}
+
+button:hover, button:focus, 
+ button:active{
+    transform: scale(0.98);
+    filter:grayscale(15%);
+ 
+}
+.cart .label {
+  background-color: var(--Rose50);
+  padding:1rem;
+  width:16rem;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  position: relative;
+    text-align: right;
+   
+}
+
+
+
+.cart .label ::after {
+    content: url("assets/images/icon-carbon-neutral.svg");
+    position: absolute;
+    left:20px;
+    bottom:11px;
+}
+
+.cart .order-total p {
+    margin-top:1rem;
+    font-size:0.8rem;
+    color:var(--Rose500);
+    font-weight: 400;
+}
+
+.cart .order-total p span{
+    margin-left: 7rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--Rose900);
+}
+.cart .order-total {
+    display: none;
+}
+
+header {
+    position: absolute;
+    width:100%;
+    min-height: 100vw;
+    height: 100%;
+    background-color: rgba(128, 128, 128,0.5);
+    margin:0;
+    z-index: 1;
+   display: none;
+   flex-direction: column;
+   justify-content: start;
+   align-items: center;
+}
+.message {
+   width:50%;
+    background-color: white;
+    border-radius: 10px;
+    padding:2rem;
+    max-width:35rem;
+    min-width: 30rem;
+    margin-top:15%;
+    position: relative;
+}
+
+.message .message-inner {
+    background-color: var(--Rose50);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+   
+   
+
+}
+
+.message .message-inner div {
+    border-bottom: 0.1px solid;
+    border-image-slice: 1;
+    border-width: 1px;
+    font-size:0.8rem;
+    border-image-source: linear-gradient(to left,transparent, var(--Rose300), transparent);
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding:0;
+}
+
+.message h2 {
+    color:var(--Rose400);
+    font-weight: 500;
+    font-size: 1rem;
+    margin: 0.4rem 0 1.8rem 0;
+}
+
+.message h4 {
+    color:var(--Rose900);
+    font-weight: 500;
+    transform: translate(100px,40px);
+}
+
+.message .multiply , .message .single-price {
+    display: inline-block;
+  transform: translate(0,-25px);
+  
+}
+
+
+
+.message .total-price{
+    display: inline-block;
+    margin:0;
+    position: absolute;
+    top:2.5rem;
+    right:0;
+    color: var(--Rose900);
+    font-weight: 800;
+    font-size: 1rem;
+    margin-right:2rem;
+
+}
+.thumbnail {
+    transform: scale(0.7);
+    border-radius: 10px;
+}
+
+.message p{
+    color: var(--Rose500);
+    font-weight: 400;
+    font-size: 0.95rem;
+    background-color: var(--Rose50);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding:2rem 0 2rem 1.2rem;
+}
+
+.message p span {
+    color: var(--Rose900);
+    font-weight: 800;
+    position: absolute;
+    right:0;
+    margin-right:4rem;
+    
+}
+
+.message button {
+    margin-top:1.8rem;
+}
+
+@media (max-width:1074px){
+    #dessert {
+        top:3.5%;
+    }
+}
+
+@media (max-width:1066px){
+    #dessert {
+        left:20%;
+    }
+    .cart {
+      transform: translate(0, -12rem);
+      
+    }
+}
+
+@media (max-width:708px){
+    #dessert {
+        top:2%;
+        left:33%;
+    }
+   
+}
